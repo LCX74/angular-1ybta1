@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {}
+//test
 
 /*
 Copyright Google LLC. All Rights Reserved.
