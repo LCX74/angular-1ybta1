@@ -1,0 +1,16 @@
+<h2>Mission Control</h2>
+<button type="button" (click)="announce()">Announce mission</button>
+
+<app-astronaut *ngFor="let astronaut of astronauts" [astronaut]="astronaut">
+  <h1 item0>单插槽内容投影测试！00</h1>
+  <ng-container ngProjectAs="[item1]">
+    <h1>单插槽内容投影测试！11</h1>
+    <h1>222</h1>
+    <h1>333</h1>
+  </ng-container>
+</app-astronaut>
+
+<h3>History</h3>
+<ul>
+  <li *ngFor="let event of history">{{event}}</li>
+</ul>

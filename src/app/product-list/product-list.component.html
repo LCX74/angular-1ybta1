@@ -2,10 +2,7 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a
-      [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]"
-    >
+    <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
       {{ product.name }}
     </a>
   </h3>
@@ -16,8 +13,12 @@
   <app-product-alerts [product]="product" (notify)="onNotify()">
   </app-product-alerts>
 </div>
-<div>{{ products[0].name }}</div>
-<input type="text" [value]="products[0].name" />
+
+<div style="margin-top: 1rem;">
+  <label>sadasdas</label>
+  <input [(ngModel)]="name" type="text">
+  <input type="text" [value]="name">
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

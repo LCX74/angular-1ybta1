@@ -9,6 +9,7 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  name="lcx";
 
   share() {
     window.alert('The product has been shared!');
@@ -16,6 +17,13 @@ export class ProductListComponent {
 
   onNotify() {
     alert('You will be notified when the product goes on sale');
+  }
+
+  onClick(name: string) {
+    alert(`ok, you are succesfull,${name}`);
+  }
+  setValue(value: string) {
+    this.name = value;
   }
 }
 

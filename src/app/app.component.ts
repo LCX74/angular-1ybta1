@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { AfterViewInit, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: "./app.component.html",
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  @ViewChild(ProductListComponent)
+  private timerComponent!: ProductListComponent;
+  ok(name: string) {
+    this.timerComponent.onClick(name);
+  }
+}
 //test
 
 /*

@@ -1,5 +1,12 @@
 
 
+:host:hover {
+    border: 1rem solid red;
+}
+*{
+    background-color: aqua!important;
+    color: black!important;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
