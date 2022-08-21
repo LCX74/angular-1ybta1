@@ -13,8 +13,9 @@ import { CartComponent } from './cart/cart.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
-import { MissioncontrolComponent } from './missioncontrol/missioncontrol.component';
+import { MissioncontrolComponent, ZippyContentDirective, AdDirective } from './missioncontrol/missioncontrol.component';
 import { AstronautComponent } from './astronaut/astronaut.component';
+import { AdBannerComponent, HeroProfileComponent, HeroJobAdComponent } from './ad-banner/ad-banner.component';
 
 @NgModule({
   imports: [
@@ -40,11 +41,16 @@ import { AstronautComponent } from './astronaut/astronaut.component';
     CartComponent,
     ShippingComponent,
     MissioncontrolComponent,
+    ZippyContentDirective,
+    AdDirective,
     AstronautComponent,
+    AdBannerComponent,
+    HeroProfileComponent,
+    HeroJobAdComponent,
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
 
 /*
 Copyright Google LLC. All Rights Reserved.

@@ -5,6 +5,9 @@
         Confirm
     </button>
 </p>
-<div *ngIf="true">
+<!-- <div *ngIf="true">
     <ng-content select="[item1]"></ng-content>
+</div> -->
+<div *ngIf="true" id="contentId">
+    <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
 </div>

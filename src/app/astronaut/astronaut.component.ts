@@ -1,7 +1,8 @@
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, ContentChild, ContentChildren, Input, OnDestroy } from '@angular/core';
 
 import { MissionService } from '../mission.service';
 import { Subscription } from 'rxjs';
+import { ZippyContentDirective } from '../missioncontrol/missioncontrol.component';
 
 @Component({
   selector: 'app-astronaut',
@@ -13,6 +14,7 @@ export class AstronautComponent implements OnDestroy {
   confirmed = false;
   announced = false;
   subscription: Subscription;
+  @ContentChild(ZippyContentDirective) content!: ZippyContentDirective;
 
   constructor(private missionService: MissionService) {
     this.subscription = missionService.missionAnnounced$.subscribe(
@@ -24,6 +26,7 @@ export class AstronautComponent implements OnDestroy {
   }
 
   confirm() {
+    debugger
     this.confirmed = true;
     this.missionService.confirmMission(this.astronaut);
   }
