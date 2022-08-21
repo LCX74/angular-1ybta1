@@ -1,3 +1,4 @@
+<!-- 动态组件示例 -->
 <div style="background: lightblue;">
   <app-ad-banner [ads]="ads"></app-ad-banner>
 </div>
@@ -7,6 +8,7 @@
   <router-outlet></router-outlet>
   <!-- <app-product-list #list></app-product-list> -->
 </div>
+<!-- 通过服务实现组件之间的双向通信+内容投影 -->
 <div style="margin-top: 1rem;">
   <button [routerLink]="['/msg']">点击测试！</button>
 </div>
